@@ -1,0 +1,26 @@
+{
+	"en": {
+		"title": "Unit Converter",
+		"description": "A scalable unit converter application.",
+		"convertButton": "Convert",
+		"inputPlaceholder": "Enter a number"
+	},
+	"de": {
+		"title": "Einheitenkonverter",
+		"description": "Eine skalierbare Einheitenkonverter-Anwendung.",
+		"convertButton": "Umrechnen",
+		"inputPlaceholder": "Gib eine Zahl ein"
+	},
+	"fr": {
+		"title": "Convertisseur d'unités",
+		"description": "Une application de convertisseur d'unités évolutive.",
+		"convertButton": "Convertir",
+		"inputPlaceholder": "Entrez un nombre"
+	},
+	"es": {
+		"title": "Convertidor de unidades",
+		"description": "Una aplicación de convertidor de unidades escalable.",
+		"convertButton": "Convertir",
+		"inputPlaceholder": "Ingresa un número"
+	}
+}
