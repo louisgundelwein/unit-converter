@@ -17,27 +17,28 @@ const geistMono = Geist_Mono({
 export async function generateMetadata({
 	params,
 }: {
-	params: { locale: string };
+	params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-	const locale = params.locale || 'de';
-	const typedLocale = (
-		locale in translations ? locale : 'de'
-	) as keyof typeof translations;
-	const t = translations[typedLocale];
+	// Entpacke den params-Promise
+	const { locale } = await params;
+	const typedLocale = locale in translations ? locale : 'de';
+	const t = translations[typedLocale as keyof typeof translations];
 	return {
 		title: t.title,
 		description: t.description,
 	};
 }
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
 	params,
 }: {
 	children: React.ReactNode;
-	params: { locale: string };
+	params: Promise<{ locale: string }>;
 }) {
-	const lang = params.locale || 'de';
+	// Entpacke den Promise, um direkt auf locale zugreifen zu können
+	const { locale } = await params;
+	const lang = locale || 'de';
 
 	return (
 		<html lang={lang}>
