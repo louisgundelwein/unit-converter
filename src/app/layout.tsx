@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import translations from '../lang/locales.json';
+import AdSense from '@/components/ads';
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -42,6 +43,9 @@ export default async function RootLayout({
 
 	return (
 		<html lang={lang}>
+			<head>
+				<AdSense publisherId={'6105108199502947'} />
+			</head>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
