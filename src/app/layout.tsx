@@ -44,6 +44,10 @@ export default async function RootLayout({
 	return (
 		<html lang={lang}>
 			<head>
+				<meta
+					name="google-adsense-account"
+					content="ca-pub-6105108199502947"
+				></meta>
 				<AdSense publisherId={'6105108199502947'} />
 			</head>
 			<body
